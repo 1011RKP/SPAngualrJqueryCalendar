@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CongressCalendar</title>
+  <base href="/">
+  <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+  <!-- https://github.com/aws/aws-amplify/issues/678 fix: -->
+  <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
+  <!-- https://github.com/aws/aws-amplify/issues/678 fix end-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

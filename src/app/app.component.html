@@ -1,0 +1,22 @@
+<link type="text/css" href="/sites/congress/SiteAssets/Calendar/CSS/congresscalendar.css"/>
+<div class="container">
+  <div class="row">
+    <h4 class="Eventcalendarheading">Congress Calendar<br /></h4>
+    <div>
+      <label class="label-US">US</label>
+      <label class="label-EU">EU</label>
+      <label class="label-Japan">Japan</label>
+      <label class="label-ROW">ROW</label>
+    </div>
+  </div>
+  <div *ngIf="calendarOptions">
+     <!--(eventResize)="updateEvent($event.detail)" (eventRender)="eventrender($event.detail)" (clickButton)="clickButton($event.detail)"  -->
+    <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
+       (eventMouseover)="eventMouseOver($event.detail)"></ng-fullcalendar>
+  </div>
+  <div class="col-md-12 col-lg-12" style="background-color:#eea236;border-radius: .50em;padding-bottom: 5px;padding-top: 5px;text-decoration: underline;">
+      <a target="_blank" style="cursor:pointer;color:black;padding:5px;font-weight:bold;"
+        href="/sites/CT/Pages/CongressCalendar.aspx">Click here to add congresses to your Outlook calendar</a>
+    </div>
+    
+</div>
